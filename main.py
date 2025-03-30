@@ -336,9 +336,9 @@ def handle_callback(call):
             results = results[:10] if len(results) >= 10 else results
             # Prepare list of steels for this type, filtering type from name if redundant
             steel_list = "\n".join(
-                [f"🔧 {row['name']}{'' if row['types'] in row['name'] else f'\n (🏷️ {row['types']})'} \n- 💵 {row['price']}\n{'➖'*4}\n" 
-                 for _, row in results.iterrows()]
-            )
+    ["🔧 " + row['name'] + ('' if row['types'] in row['name'] else '\n🏷️ ' + row['types']) + " \n- 💵 " + row['price'] + "\n" + "➖"*4 + "\n"
+     for _, row in results.iterrows()]
+)
             response_text = f"لیست فولادهای نوع {steel_type}:\n{steel_list}"
             
             # Create inline keyboard with "بازگشت" button
