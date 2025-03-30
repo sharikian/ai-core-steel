@@ -176,7 +176,7 @@ def stream_gpt_response(chat_id, prompt, found_types=None):
     if found_types:
         steel_data = df[df['types'].isin(found_types)]
         steel_info = "\n".join(
-            [f"- {row['name']}{'' if row['types'] in row['name'] else f' ({row["types"]})'}: Price {row['price']}" 
+            [f"- {row['name']}{'' if row['types'] in row['name'] else f''' ({row['types']})'''}: Price {row['price']}" 
              for _, row in steel_data.iterrows()]
         )
     else:
