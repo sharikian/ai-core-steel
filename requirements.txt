@@ -1,3 +1,4 @@
 telebot==0.0.5  # PyTelegramBotAPI (telebot) - specify a stable version
 pandas==2.2.2   # For data manipulation with CSV
 g4f==0.3.2.5    # For ChatCompletion and Provider (use the latest compatible version)
+curl-cffi
