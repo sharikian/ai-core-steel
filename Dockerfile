@@ -15,8 +15,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy the Python script and CSV file to the container
-COPY main.py .
-COPY main.csv .
+COPY . .
 
 # Set environment variables (optional, adjust as needed)
 ENV PYTHONUNBUFFERED=1
