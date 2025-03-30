@@ -2,3 +2,4 @@ telebot
 pandas
 g4f
 curl-cffi
+openpyxl
