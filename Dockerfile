@@ -22,4 +22,4 @@ COPY main.csv .
 ENV PYTHONUNBUFFERED=1
 
 # Run the bot when the container launches
-CMD ["python", "bot.py"]
+CMD ["python", "main.py"]
